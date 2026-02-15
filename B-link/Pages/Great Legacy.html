@@ -15,10 +15,15 @@
 	<title>Beelink | Compare prices across multiple markets</title>
 
     <style>
+
+		body {
+			margin: 0;
+		}
 		
 		nav ul {
 			display:flex; /*puts content side by side*/
 			align-items: center; /*Used alongside display: flex to align properly*/
+			justify-content: center; /*used to center the content in the nav bar*/
 			list-style: none; /*used to remove list bullet points*/
 			gap: 2em;
 		}
@@ -65,10 +70,32 @@
 			align-content: center;
 		}
 
-		h1 {
+		.header-section {
+			position: relative;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+
+		.header-img {
+			width:100vw;
+			height: 300px;
+			margin: 0;
+			padding: 0;
+			background-size: cover;
+		}
+
+		.header-text {
+			position: absolute;
+			top: 0;
+			left: 52%;
+			transform: translate(-50%, -50%);
 			margin-top: 50px;  /* Add some space above the heading */
 			text-align: center;
-			padding: 2em; /*defines space between contents in an element*/
+
+			color: white;
 		}
 
 
@@ -86,7 +113,10 @@
 				</ul>
 			</nav>
 
-			<h1>GREAT LEGACY</h1>
+			<section class="header-section">
+				<img class="header-img" src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG">
+				<h1 class="header-text">GREAT LEGACY</h1>
+			</section>
 
 			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/2cfd2606-1ed1-4c33-b7b3-959c45aa28fa.jpeg">
