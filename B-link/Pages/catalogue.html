@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" 
+		content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" 
+		content="Beelinks fashion brand items page"/>
+		<meta name="keywords" 
+		content="Shop, Compare, Cost"/>
+
+	<title>Beelink | Compare prices across multiple markets</title>
+	<style>
+
+		body {
+			margin: 0;
+			padding-top: 50px; /* Adjust this value based on the height of your nav bar */
+		}
+
+		nav {
+			background-color: #020202;
+			padding: 5px 20px;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1000;
+			border-radius: 1px;
+			padding-right: 20px;
+		}
+
+		nav ul {
+			display:flex; /*puts content side by side*/
+			align-items: center; /*Used alongside display: flex to align properly*/
+			list-style: none; /*used to remove list bullet points*/
+			gap: 2em;
+		}
+
+		nav a {
+			text-decoration: rgb(0, 0, 0); 
+			color: rgb(255, 253, 253);
+			font-weight: 300;
+		} /*Used to  design text in the anchor*/
+
+		nav a:hover{
+			text-decoration: underline;
+		} /*used to design what happens when cusor hovers over text*/
+
+		h1 {
+			margin-top: 50px;  /* Add some space above the heading */
+			text-align: center;
+			padding: 3em; /*defines space between contents in an element*/
+		}
+
+		.brand-section {
+			margin-top: 1em;
+			margin-bottom: 1em; /*puts space between the top and bottom of the page*/
+			width: 100%; /*lets width stretch to the max screen of device*/
+			display:grid;
+			grid-template-columns: repeat(3, 1fr); /*defines grid items arrangement*/
+		} /*puts items in grid*/
+
+		@media (max-width: 768px) {
+			.brand-section {
+				grid-template-columns: repeat(2, 1fr);
+				}}
+
+		.brand-logo {
+			width: min(300px, 100%); /*used to ensure minimum image and that image is never larger than the screen being displayed on*/
+			border-radius: 50px;
+			height: 250px;
+		}
+
+	</style>
+	
+    </head>
+
+    <body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="more.html">More</a> </li>
+				</ul>
+			</nav>
+		
+		</header>
+
+		<h1>Catalogue</h1>
+
+         <div class="brand-section">
+
+				<p>
+					<a href="Great Legacy.html"><img class="brand-logo" 
+					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
+					<strong>Great Legacy</strong>
+				</p>
+				
+				<p>
+					<a href="Great Legacy.html"><img class="brand-logo" 
+					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
+					<strong>Great Legacy</strong>
+				</p>
+				
+				<p>
+					<a href="Great Legacy.html"><img class="brand-logo" 
+					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
+					<strong>Great Legacy</strong>
+				</p>
+				
+				<p>
+					<a href="Great Legacy.html"><img class="brand-logo" 
+					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
+					<strong>Great Legacy</strong>
+				</p>
+
+				<p>
+					<a href="Great Legacy.html"><img class="brand-logo" 
+					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
+					<strong>Great Legacy</strong>
+				</p>
+				
+				<p>
+					<a href="Great Legacy.html"><img class="brand-logo" 
+					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
+					<strong>Great Legacy</strong>
+				</p>
+				
+
+
+			</div>
+
+			<footer></footer>
+			
+	</body>
+</html>
