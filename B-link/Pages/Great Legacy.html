@@ -4,11 +4,13 @@
 	<head>
 
 		<meta charset="UTF-8">
+		<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
 		<meta name="description" 
 		content="Beelinks fashion items page
 		We make it easier to find the best deal without switching apps."/>
 		<meta name="keywords" 
-		content="Fashion, Compare, Cost"/>
+		content="Fashion, Compare, Cost, Great Legacy"/>
 
 	<title>Beelink | Compare prices across multiple markets</title>
 
@@ -31,13 +33,18 @@
 			text-decoration: underline;
 		} /*used to design what happens when cusor hovers over text*/
 
-		div {
+		.products {
 			margin-top: 1em;
 			margin-bottom: 1em; /*puts space between the top and bottom of the page*/
 			width: 100%; /*lets width stretch to the max screen of device*/
 			display:grid;
 			grid-template-columns: repeat(6, 1fr); /*defines grid items arrangement*/
 		} /*puts items in grid*/
+		
+		@media (max-width: 768px) {
+			.products {
+				grid-template-columns: repeat(2, 1fr);
+				}}
 
 		.clothe-text {
 			margin-top: 100px;
@@ -81,7 +88,7 @@
 
 			<h1>GREAT LEGACY</h1>
 
-			<div>
+			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/2cfd2606-1ed1-4c33-b7b3-959c45aa28fa.jpeg">
 				<p class="clothe-text" ><strong>Great Legacy</strong> GL EDITION <br/><br/>
 					 <a href="https://greatlegacy0.myshopify.com/products/gl-edition?variant=44521678930031"
@@ -105,6 +112,19 @@
 					<a href="https://greatlegacy0.myshopify.com/products/untitled-jan31_01-21?variant=44242869157999"
 					  class="buy-button"> <button class="buy-button">Place Order</button></a>
 				</p>
+
+				<img class="clothe-image" src="../images fsn/Great legacy/28dedfde-8270-4d4b-ad01-bffbc4e8597a.jpeg">
+				<p class="clothe-text" ><strong>Great Legacy</strong> OUTLAW 7<br/><br/>
+					<a href="https://greatlegacy0.myshopify.com/products/b?variant=44300219547759"
+					  class="buy-button"> <button class="buy-button">Place Order</button></a>
+				</p>
+
+				<img class="clothe-image" src="../images fsn/Great legacy/e437ce5f-ea53-4fe8-855f-32fbbe1d63f5.jpeg">
+				<p class="clothe-text" ><strong>Great Legacy</strong> GL Apex TEE<br/><br/>
+					<a href="https://greatlegacy0.myshopify.com/products/untitled-jan29_18-57?variant=44202474242159"
+					  class="buy-button"> <button class="buy-button">Place Order</button></a>
+				</p>
+
 
 			</div>
 
