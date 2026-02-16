@@ -20,6 +20,7 @@
 		}
 
 		nav {
+			display: flex;
 			background-color: #020202;
 			padding: 5px 20px;
 			position: fixed;
@@ -47,6 +48,16 @@
 			text-decoration: underline;
 		} /*used to design what happens when cusor hovers over text*/
 
+		nav input {
+			padding: 10px;
+            border-radius: 10px;
+            border: none;
+			margin-left: auto; /* Pushes the search input to the right */
+			margin-right: 30px; /* Adds some space between the search input and the right edge */
+			width: 100px;
+			height: 20px;
+		}
+
 		h1 {
 			margin-top: 50px;  /* Add some space above the heading */
 			text-align: center;
@@ -57,7 +68,7 @@
 			text-align: center;
 		}
 
-		.brand-section {
+		.brand-section-container {
 			margin-top: 1em;
 			margin-bottom: 1em; /*puts space between the top and bottom of the page*/
 			width: 100%; /*lets width stretch to the max screen of device*/
@@ -66,7 +77,7 @@
 		} /*puts items in grid*/
 
 		@media (max-width: 768px) {
-			.brand-section {
+			.brand-section-container {
 				grid-template-columns: repeat(2, 1fr);
 				}}
 
@@ -93,61 +104,91 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="more.html">More</a> </li>
 				</ul>
+				<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
 			</nav>
 		
 		</header>
 
 		<h1>Catalogue</h1>
 
-         <div class="brand-section">
+         <div class="brand-section-container">
 
+			<div class="brand-section">
 				<p class="logo-align">
 					<a href="Great Legacy.html"><img class="brand-logo" 
 					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
 					<br/>
 					<strong>Great Legacy</strong>
 				</p>
+			</div>
 				
+			<div class="brand-section">
 				<p class="logo-align">
 					<a href="Great Legacy.html"><img class="brand-logo" 
 					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
 					<br/>
 					<strong>Great Legacy</strong>
 				</p>
+			</div>
 				
+			<div class="brand-section">
 				<p class="logo-align">
 					<a href="Great Legacy.html"><img class="brand-logo" 
 					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
 					<br/>
 					<strong>Great Legacy</strong>
 				</p>
+			</div>
 				
+			<div class="brand-section">
 				<p class="logo-align">
 					<a href="Great Legacy.html"><img class="brand-logo" 
 					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
 					<br/>
 					<strong>Great Legacy</strong>
 				</p>
-
+			</div>
+			
+			<div class="brand-section">
 				<p class="logo-align">
 					<a href="Great Legacy.html"><img class="brand-logo" 
 					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
 					<br/>
 					<strong>Great Legacy</strong>
 				</p>
+			</div>
 				
+			<div class="brand-section">
 				<p class="logo-align">
 					<a href="Great Legacy.html"><img class="brand-logo" 
 					src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG"></a>
 					<br/>
 					<strong>Great Legacy</strong>
 				</p>
-				
-
+			</div>
 
 			</div>
 
 			<footer></footer>
 			
+		<script>
+
+        function searchFunction() {
+			let input = document.getElementById("searchInput");
+            let filter = input.value.toLowerCase();
+            let products = document.getElementsByClassName("products");
+			
+			for (let i = 0; i < products.length; i++) {
+				let text = products[i].textContent.toLowerCase();
+				if (text.includes(filter)) {
+					products[i].style.display = "";
+					} else {
+						products[i].style.display = "none";
+						}
+						}
+						}
+
+        </script>
+
 	</body>
 </html>
