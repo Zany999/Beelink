@@ -22,6 +22,7 @@
 		}
 
 		nav {
+			display: flex;
 			background-color: #020202;
 			padding: 5px 20px;
 			position: fixed;
@@ -49,22 +50,40 @@
 			text-decoration: underline;
 		} /*used to design what happens when cusor hovers over text*/
 
-		.products {
+		nav input {
+			padding: 10px;
+            border-radius: 10px;
+            border: none;
+			margin-left: auto; /* Pushes the search input to the right */
+			margin-right: 30px; /* Adds some space between the search input and the right edge */
+			width: 100px;
+			height: 20px;
+		}
+
+		.products img{
+			display: block;
+			margin: 0 auto;       /* centers the image horizontally */
+            width: 230px;      /* optional: makes image responsive */
+            height: 230px;
+		}
+
+		.products-container {
 			margin-top: 1em;
 			margin-bottom: 1em; /*puts space between the top and bottom of the page*/
 			width: 100%; /*lets width stretch to the max screen of device*/
 			display:grid;
-			grid-template-columns: repeat(6, 1fr); /*defines grid items arrangement*/
+			grid-template-columns: repeat(3, 1fr); /*defines grid items arrangement*/
 			align-items: center;
 		} /*puts items in grid*/
 
 		@media (max-width: 768px) {
-			.products {
+			.products-container {
 				grid-template-columns: repeat(2, 1fr);
 				}}
 
 		.clothe-text {
 			margin-top: 100px;
+			text-align: center;
 		}
 
 		.clothe-image {
@@ -139,6 +158,7 @@
 					<li><a href="catalogue.html">Catalogue</a></li>
 					<li><a href="more.html">More</a> </li>
 				</ul>
+				<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
 			</nav>
 
 			<section class="header-section">
@@ -146,41 +166,70 @@
 				<h1 class="header-text">GREAT LEGACY</h1>
 			</section>
 
+			<div class="products-container">
+
 			<div class="products">
-				
 				<img class="clothe-image" src="../images fsn/Great legacy/2cfd2606-1ed1-4c33-b7b3-959c45aa28fa.jpeg">
 				<p class="clothe-text" ><strong>Great Legacy</strong> GL EDITION <br/><br/>
 					 <a href="https://greatlegacy0.myshopify.com/products/gl-edition?variant=44521678930031">
 						<button class="buy-button">Place Order</button></a>
 				</p>
+			</div>
 
+			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/cd349fd6-653d-4468-9969-4834e5487689.jpeg">
 				<p class="clothe-text" ><strong>Great Legacy</strong> AFTER DARK 2<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/after-dark-2?variant=44341382938735"> 
 					  <button class="buy-button">Place Order</button></a>
 				</p>
+			</div>
 
+			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/4f3cc3b7-99a3-48a6-85ec-13d9f4792fd7.JPG">
 				<p class="clothe-text" ><strong>Great Legacy</strong> LEGACY MONARCH<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/legacy-monarch?variant=44525883228271"> 
 					  <button class="buy-button">Place Order</button></a>
 				</p>
+			</div>
 
+			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/f91e7c10-6fdd-483a-a056-0365d3a12a7b.JPG">
 				<p class="clothe-text" ><strong>Great Legacy</strong> LEGACY GRIP TEE<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/legacy-grip-tee?variant=44537614041199"> 
 					  <button class="buy-button">Place Order</button></a>
 				</p>
+			</div>
 
+			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/faac6dac-080b-4523-8b73-0bfcaa465faf.JPG">
 				<p class="clothe-text" ><strong>Great Legacy</strong>  GL-MADE IN IKOYI<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/gl-made-in-ikoyi?variant=44508133326959"> 
 					<button class="buy-button">Place Order</button></a>
 				</p>
+			</div>
 
 			</div>
 
 		</header>
+
+		<script>
+
+        function searchFunction() {
+			let input = document.getElementById("searchInput");
+            let filter = input.value.toLowerCase();
+            let products = document.getElementsByClassName("products");
+			
+			for (let i = 0; i < products.length; i++) {
+				let text = products[i].textContent.toLowerCase();
+				if (text.includes(filter)) {
+					products[i].style.display = "";
+					} else {
+						products[i].style.display = "none";
+						}
+						}
+						}
+
+        </script>
 
     </body>
 
