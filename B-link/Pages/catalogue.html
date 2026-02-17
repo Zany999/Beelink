@@ -12,6 +12,10 @@
 		content="Shop, Compare, Cost"/>
 
 	<title>Beelink | Compare prices across multiple markets</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 	<style>
 
 		body {
@@ -48,18 +52,6 @@
 			text-decoration: underline;
 		} /*used to design what happens when cusor hovers over text*/
 
-		nav input {
-			font-size: 16px;
-			padding: 5px;
-            border-radius: 3px;
-            border: none;
-			margin-top: 15px;
-			margin-left: auto; /* Pushes the search input to the right */
-			margin-right: 30px; /* Adds some space between the search input and the right edge */
-			width: 50px;
-			height: 10px;
-		}
-
 		h1 {
 			margin-top: 50px;  /* Add some space above the heading */
 			text-align: center;
@@ -95,6 +87,46 @@
 				height: 150px;
 				}}
 
+	    .search-container{
+			position: relative;
+			margin-left: auto; /* Pushes the search container to the right */
+			margin-right: 50px; /* Adds some space between the search container and the right edge */
+			margin-top: 13px;
+		}
+
+		.search-input{
+			width: 0;
+			padding: 0;
+			border: none;
+			outline: none;
+			transition: width 0.4s ease, padding 0.4s ease;
+			font-size: 17px;
+		}
+
+		.search-input:focus {
+			width: 200px;
+			padding: 5px;
+			border-radius: 5px;
+		}
+
+		@media (max-width: 768px) {
+            .search-input:focus {
+            position: fixed;
+			border-radius: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+			height: 35px;
+            padding: 15px;
+            background: white;
+			z-index: 1001; /* Ensure the search input appears above other elements */
+			}}
+
+		.search-btn {
+			cursor: pointer;
+			color: #ffffff;
+		}
+
 	</style>
 	
     </head>
@@ -106,7 +138,14 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="more.html">More</a> </li>
 				</ul>
-				<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+
+				<div class="search-container">
+					<input type="text" class="search-input" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+					<label for="searchInput">
+						<i class="fas fa-search search-btn"></i>
+					</label>
+				</div>
+
 			</nav>
 		
 		</header>
