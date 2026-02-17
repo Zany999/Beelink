@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +13,8 @@
 		content="Fashion, Compare, Cost, Great Legacy"/>
 
 	<title>Beelink | Compare prices across multiple markets</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
 
@@ -50,18 +51,6 @@
 		nav a:hover{
 			text-decoration: underline;
 		} /*used to design what happens when cusor hovers over text*/
-
-		nav input {
-			font-size: 16px;
-			padding: 5px;
-            border-radius: 3px;
-            border: none;
-			margin-top: 15px;
-			margin-left: auto; /* Pushes the search input to the right */
-			margin-right: 30px; /* Adds some space between the search input and the right edge */
-			width: 50px;
-			height: 10px;
-		}
 
 		.products img{
 			display: block;
@@ -143,23 +132,105 @@
 		}
 
 		.header-text {
-			position: absolute;
-			top: 0;
-			left: 52%;
-			transform: translate(-50%, -50%);
-			margin-top: 50px;  /* Add some space above the heading */
-			text-align: center;
-			color: white;
+			color: rgb(0, 0, 0);
 		}
 
 		@media (max-width: 768px) {
 			.header-text {
-				font-size: small;
-				top: 0;
+				font-size: larger;
+			}}
+
+			.footer-section {
+			position: relative;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+
+		.footer-img {
+			width:100vw;
+			height: 300px;
+			margin: 0;
+			padding: 0;
+			background-size: cover;
+		}
+
+		.footer-text {
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin-top: 50px;  /* Add some space above the heading */
+			text-align: center;
+			color: white;
+			text-decoration: underline;
+		}
+
+		@media (max-width: 768px) {
+			.footer-text {
+				font-size: x-large;
+				top: 20%;
 			    left: 53%;
 			    transform: translate(-50%, -50%);
 			}}
 
+            .social-icons {
+				position: absolute;
+				top: 55%;
+			    left: 50%;
+				transform: translate(-50%, -50%);
+                color: rgb(255, 246, 246);
+                font-size: 24px;
+                margin: 0 15px;
+                text-decoration: none;
+            }
+
+			.social-icons a {
+				color: rgb(255, 246, 246);
+				margin: 0 10px;
+				text-decoration: none;
+			}
+
+            .social-icons a:hover {
+                color: gray;
+            }
+
+			.search-container{
+			position: relative;
+			margin-left: auto; /* Pushes the search container to the right */
+			margin-right: 50px; /* Adds some space between the search container and the right edge */
+			margin-top: 13px;
+		}
+
+		.search-input{
+			width: 0;
+			padding: 0;
+			border: none;
+			outline: none;
+			transition: width 0.4s ease, padding 0.4s ease;
+		}
+
+		.search-input:focus {
+			width: 150px;
+			padding: 5px;
+			border-radius: 5px;
+		}
+
+		.search-btn {
+			cursor: pointer;
+			color: #ffffff;
+		}
+
+		.brand-page-link{
+			text-decoration: none;
+			color: #020202;
+		}
+
+		.brand-page-link:hover{
+			text-decoration: underline;
+		}
 
     </style>
 
@@ -174,19 +245,29 @@
 					<li><a href="catalogue.html">Catalogue</a></li>
 					<li><a href="more.html">More</a> </li>
 				</ul>
-				<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
-			</nav>
+				
+				<div class="search-container">
+					<input type="text" class="search-input" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+					<label for="searchInput">
+						<i class="fas fa-search search-btn"></i>
+					</label>
+				</div>
 
-			<section class="header-section">
+			</nav>
+        </header>
+
+		    <section class="header-section">
 				<img class="header-img" src="../images fsn/Great legacy/627839a2-2465-477c-8e09-e6d088122392.JPG">
 				<h1 class="header-text">GREAT LEGACY</h1>
 			</section>
 
-			<div class="products-container">
+		<div class="products-container">
 
 			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/2cfd2606-1ed1-4c33-b7b3-959c45aa28fa.jpeg">
-				<p class="clothe-text" ><strong>Great Legacy</strong> GL EDITION <br/><br/>
+				<p class="clothe-text" >
+					<a class="brand-page-link" href="Great Legacy.html"> <strong>Great Legacy</strong></a>
+					 GL EDITION <br/><br/>
 					 <a href="https://greatlegacy0.myshopify.com/products/gl-edition?variant=44521678930031">
 						<button class="buy-button">Place Order</button></a>
 				</p>
@@ -194,7 +275,9 @@
 
 			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/cd349fd6-653d-4468-9969-4834e5487689.jpeg">
-				<p class="clothe-text" ><strong>Great Legacy</strong> AFTER DARK 2<br/><br/>
+				<p class="clothe-text" >
+					<a class="brand-page-link" href="Great Legacy.html"> <strong>Great Legacy</strong></a>
+					 AFTER DARK 2<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/after-dark-2?variant=44341382938735"> 
 					  <button class="buy-button">Place Order</button></a>
 				</p>
@@ -202,7 +285,9 @@
 
 			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/4f3cc3b7-99a3-48a6-85ec-13d9f4792fd7.JPG">
-				<p class="clothe-text" ><strong>Great Legacy</strong> LEGACY MONARCH<br/><br/>
+				<p class="clothe-text" >
+					<a class="brand-page-link" href="Great Legacy.html"> <strong>Great Legacy</strong></a>
+					 LEGACY MONARCH<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/legacy-monarch?variant=44525883228271"> 
 					  <button class="buy-button">Place Order</button></a>
 				</p>
@@ -210,7 +295,9 @@
 
 			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/f91e7c10-6fdd-483a-a056-0365d3a12a7b.JPG">
-				<p class="clothe-text" ><strong>Great Legacy</strong> LEGACY GRIP TEE<br/><br/>
+				<p class="clothe-text" >
+					<a class="brand-page-link" href="Great Legacy.html"> <strong>Great Legacy</strong></a>
+					 LEGACY GRIP TEE<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/legacy-grip-tee?variant=44537614041199"> 
 					  <button class="buy-button">Place Order</button></a>
 				</p>
@@ -218,15 +305,39 @@
 
 			<div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/faac6dac-080b-4523-8b73-0bfcaa465faf.JPG">
-				<p class="clothe-text" ><strong>Great Legacy</strong>  GL-MADE IN IKOYI<br/><br/>
+				<p class="clothe-text" >
+					<a class="brand-page-link" href="Great Legacy.html"> <strong>Great Legacy</strong></a>
+					 GL-MADE IN IKOYI<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/gl-made-in-ikoyi?variant=44508133326959"> 
 					<button class="buy-button">Place Order</button></a>
 				</p>
 			</div>
 
-			</div>
+		</div>
 
-		</header>
+			<footer>
+
+				<section class="footer-section">
+				<img class="footer-img" src="../images fsn/Great legacy/7f325217-0429-43c3-8a80-078fb607da77.jpeg">
+				<h1 class="footer-text">Elevate your style</h1>
+
+				<div class="social-icons">
+    
+                    <a href="https://instagram.com/great_legacy1" target="_blank">
+                        <i class="fab fa-instagram"></i>
+					</a>
+
+                    <a href="https://tiktok.com/great_legacy_" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+					</a>
+
+                    <a href="https://twitter.com/greatlegacy001" target="_blank">
+                        <i class="fab fa-x-twitter"></i>
+					</a>
+
+			    </section>
+
+			</footer>
 
 		<script>
 
