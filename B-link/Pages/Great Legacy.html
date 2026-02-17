@@ -214,10 +214,22 @@
 		}
 
 		.search-input:focus {
-			width: 150px;
+			width: 200px;
 			padding: 5px;
 			border-radius: 5px;
 		}
+
+		@media (max-width: 768px) {
+            .search-input:focus {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: white;
+			z-index: 1001; /* Ensure the search input appears above other elements */
+			}}
+
 
 		.search-btn {
 			cursor: pointer;
