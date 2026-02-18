@@ -7,12 +7,14 @@
 		<meta name="viewport" 
 		content="width=device-width, initial-scale=1.0"/>
 		<meta name="description" 
-		content="Beelinks fashion items page"/>
+		content="Beelinks fashion items page
+		We make it easier to find the best deal without switching apps."/>
 		<meta name="keywords" 
 		content="Shop, Compare, Cost"/>
 
 	<title>Beelink | Compare prices across multiple markets</title>
-
+    
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	
 	<style>
@@ -55,12 +57,28 @@
 		h1 {
 			margin-top: 50px;  /* Add some space above the heading */
 			text-align: center;
-			padding: 3em; /*defines space between contents in an element*/
+			padding-top: 3em; /*defines space between contents in an element*/
 		}
+
+		.motto {
+			font-family: 'Playfair Display', serif;
+			text-align: center;
+			text-decoration: overline;
+			font-weight: lighter;
+			font-style: italic;
+			font-size: medium;
+			letter-spacing: 0px;
+			opacity: 0.6;
+			padding-bottom: 2em;
+		}
+
+		@media (max-width: 768px) {
+			.motto {
+				font-size: small;
+				}}
 
 		.buy-button {
 			display: inline-block;
-			text-decoration:dotted; color: rgb(0, 0, 0);
 			border-radius: 10px;
 			width:fit-content;
 			cursor: pointer;
@@ -177,7 +195,7 @@
 			<nav>
 				<ul>
 					<li><a href="catalogue.html">Catalogue</a></li>
-					<li><a href="more.html">More</a> </li>
+					<li><a href="about.html">About</a> </li>
 				</ul>
 				
 				<div class="search-container">
@@ -192,6 +210,7 @@
 		</header>
 
 		<h1>Beelink</h1>
+		<h2 class="motto">Compare markets without switching apps.</h2>
 
 	<div class="products-container">
 
@@ -199,7 +218,7 @@
 				<img class="clothe-image" src="../images fsn/Great legacy/2cfd2606-1ed1-4c33-b7b3-959c45aa28fa.jpeg">
 
 				<p class="clothe-text" >
-					<a class="brand-page-link" href="Great Legacy.html"> <strong>Great Legacy</strong></a>
+					<a class="brand-page-link" href="great-legacy.html"> <strong>Great Legacy</strong></a>
 					GL EDITION <br/><br/>
 					 <a href="https://greatlegacy0.myshopify.com/products/gl-edition?variant=44521678930031">
 					  <button class="buy-button">Place Order</button></a>
@@ -209,7 +228,7 @@
 		    <div class="products">
 				<img class="clothe-image" src="../images fsn/Great legacy/cd349fd6-653d-4468-9969-4834e5487689.jpeg">
 				<p class="clothe-text" >
-					<a class="brand-page-link" href="Great Legacy.html"> <strong>Great Legacy</strong></a>
+					<a class="brand-page-link" href="great-legacy.html"> <strong>Great Legacy</strong></a>
 					 AFTER DARK 2<br/><br/>
 					<a href="https://greatlegacy0.myshopify.com/products/after-dark-2?variant=44341382938735">
 					  <button class="buy-button">Place Order</button></a>
